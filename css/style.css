@@ -406,8 +406,10 @@ ul {
   font-display: swap;
   src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"); }
 
-.timeline--margin {
-  margin: 100px 0; }
+.timeline {
+  height: 100vh; }
+  .timeline--margin {
+    margin: 100px 0; }
 
 .timeline__list {
   display: -webkit-box;
@@ -419,7 +421,8 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  counter-reset: myCounter; }
+  counter-reset: myCounter;
+  min-height: 60px; }
 
 .timeline__span {
   font-size: 10px;
@@ -468,7 +471,7 @@ ul {
   border: 1px solid #ccc;
   background: #ffffff; }
 
-.button.bottom--margin {
+.button.button--margin {
   margin-bottom: 50px; }
 
 .button__nav {
@@ -514,33 +517,34 @@ ul {
 .timeline__item--center .timeline__span {
   margin-left: -10px; }
 
-.item-double .timeline__item {
+.timeline__list--double .timeline__item {
   text-align: center; }
-  .item-double .timeline__item:last-child {
+  .timeline__list--double .timeline__item:last-child {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     position: relative; }
-    .item-double .timeline__item:last-child::after {
+    .timeline__list--double .timeline__item:last-child::after {
       content: '';
       position: absolute;
       right: 0;
       width: 8px;
       height: 8px;
+      top: -4px;
       border-radius: 50%;
       border: 1px solid #ccc;
       background: #ffffff; }
-    .item-double .timeline__item:last-child .timeline__circle {
+    .timeline__list--double .timeline__item:last-child .timeline__circle {
       left: 0px; }
 
-.item-double .timeline__item--orange::before {
+.timeline__list--double .timeline__item--orange::before {
   background: #f49530; }
 
-.item-double .timeline__span::after {
+.timeline__list--double .timeline__span::after {
   right: 5px; }
 
-.timeline__list--bottom.item-double .timeline__item:last-child::after {
+.timeline__list--bottom.timeline__list--double .timeline__item:last-child::after {
   bottom: -3px; }
 
-.timeline__list--top.item-double .timeline__item:last-child::after {
+.timeline__list--top.timeline__list--double .timeline__item:last-child::after {
   top: -3px; }

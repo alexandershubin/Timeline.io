@@ -1,32 +1,20 @@
 'use strict'
-const button = document.querySelectorAll('.button');
+const button = document.querySelectorAll('.button__nav');
 const timelineList = document.querySelector('.timeline__list');
-const timelineItem = document.querySelectorAll('.timeline__item');
+
+const deformationBlockList = (text) => {
+  const timelineList2 = text.cloneNode(true)
+  return text.after(timelineList2)
+}
 
 button.forEach(item => {
-  item.addEventListener('click', (evt) => {
-    const { target } = evt;
-    const buttonFirst = target.matches('.button__nav--top');
-    const buttonSecond = target.matches('.button__nav--bottom');
-    const buttonThird = target.matches('.button__nav--toggle');
-    const buttonFifth = target.matches('.button__nav--all');
+  item.addEventListener('click', (e) => {
+    const {target} = e;
+    const type = target.getAttribute('data-type');
     
-    if (buttonFirst) {
-      timelineList.classList.add('timeline__list--top');
-      timelineList.classList.remove('timeline__list--bottom');
-    }
-  
-    if (buttonSecond) {
-      timelineList.classList.add('timeline__list--bottom');
-      timelineList.classList.remove('timeline__list--top');
-    }
+    if (!type) return deformationBlockList(timelineList);
     
-    if (buttonThird) {
-      timelineList.classList.toggle('item-double');
-    }
-    
-    if (buttonFifth) {
-      createComponent(timelineList)
-    }
-  })
+    timelineList.className = 'timeline__list';
+    timelineList.classList.add(`timeline__list--${type}`)
+  });
 });
