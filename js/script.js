@@ -13,7 +13,6 @@ button.forEach(item => {
     const type = target.getAttribute('data-type');
     
     if (!type) return deformationBlockList(timelineList);
-    
     timelineList.className = 'timeline__list';
     timelineList.classList.add(`timeline__list--${type}`)
   });
