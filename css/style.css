@@ -406,7 +406,7 @@ ul {
   font-display: swap;
   src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"); }
 
-.timeline-margin {
+.timeline--margin {
   margin: 100px 0; }
 
 .timeline__list {
@@ -468,17 +468,17 @@ ul {
   border: 1px solid #ccc;
   background: #ffffff; }
 
-.button.margin-bottom {
+.button.bottom--margin {
   margin-bottom: 50px; }
 
-.button-block {
+.button__nav {
   background: none;
   border-radius: 5px;
   border: 1px solid #64ae3a;
   margin: 5px 5px 5px 0;
   padding: 5px 10px;
   outline: none; }
-  .button-block:hover {
+  .button__nav:hover {
     background: #f49530;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
@@ -497,21 +497,21 @@ ul {
   top: auto;
   bottom: -4px; }
 
-.item--green::before {
+.timeline__item--green::before {
   background: #64ae3a; }
 
-.item--green .timeline__circle {
+.timeline__item--green .timeline__circle {
   background: #64ae3a;
   border: 1px solid #ffffff; }
 
-.item--orange::before {
+.timeline__item--orange::before {
   background: #ebebeb; }
 
-.item--orange .timeline__circle {
+.timeline__item--orange .timeline__circle {
   background: #f49530;
   border: 1px solid #ffffff; }
 
-.item--center .timeline__span {
+.timeline__item--center .timeline__span {
   margin-left: -10px; }
 
 .item-double .timeline__item {
@@ -533,7 +533,7 @@ ul {
     .item-double .timeline__item:last-child .timeline__circle {
       left: 0px; }
 
-.item-double .item--orange::before {
+.item-double .timeline__item--orange::before {
   background: #f49530; }
 
 .item-double .timeline__span::after {
